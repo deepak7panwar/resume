@@ -1,10 +1,25 @@
-import styled from 'styled-components'
+import Layout from "../components/Layout";
+import { extractFrontMatter } from "../utility/extractFrontMatter";
 
-const Title = styled.h1`
-  color: red;
-  font-size: 50px;
-`
+export default function Home({
+  frontmatter
+}) {
+  return (
+    <Layout data={frontmatter}>
+      <article>
+        <header>
+          <h3 className="mb-1 text-3xl font-semibold text-orange-600">
+            {"title"}
+          </h3>
+        </header>
+        <section>
+          <p className="mb-8">{"description"}</p>
+        </section>
+      </article>
+    </Layout>
+  );
+}
 
-export default function Home() {
-  return <Title>My page</Title>
+export async function getStaticProps() {
+  return extractFrontMatter();
 }

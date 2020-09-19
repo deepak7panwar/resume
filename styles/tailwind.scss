@@ -1,0 +1,145 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+  background-color: #ffffff;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.h-128 {
+  min-height: 24rem;
+}
+.gradient {
+  background-color: rgb(15, 1, 94);
+  background-image: radial-gradient(
+    at 50% 100%,
+    rgba(123, 22, 255, 0.75),
+    rgb(15, 1, 94)
+  );
+}
+.card-my {
+  display: flex;
+  flex-direction: column;
+  height: 160px;
+  width: 120px;
+  background-color: #17141d;
+  border-radius: 10px;
+  color: white;
+  box-shadow: -1rem 0 20px #000;
+  transition: 0.4s ease-out;
+  position: relative;
+  stroke: white;
+  padding-right:10px;
+  fill: white;
+  left: 0px;
+}
+
+.card-my:not(:first-child) {
+  margin-left: -10px;
+}
+
+.card-my:hover {
+  transform: translateY(-50px);
+  transition: 0.4s ease-out;
+}
+
+.card-my:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+
+// education timeline
+.edu-section {
+  font: 100% "Lato", sans-serif;
+  font-weight: 300;
+  height: 100%;
+  // background-color: #4D4545;
+}
+
+.blue-bg {
+  background-color: #17141d;
+  color: white;
+  height: 100%;
+}
+
+.circle {
+  font-weight: bold;
+  padding: 15px 20px;
+  border-radius: 50%;
+  background-color: #ED8D8D;
+  color: #4D4545;
+  max-height: 50px;
+  height: 50px;
+  width: 50px;
+  z-index: 2;
+}
+
+.how-it-works.row {
+  display: flex;
+}
+.how-it-works.row .col-2 {
+  display: inline-flex;
+  align-self: stretch;
+  align-items: center;
+  justify-content: center;
+}
+.how-it-works.row .col-2::after {
+  content: "";
+  position: absolute;
+  border-left: 3px solid #ED8D8D;
+  z-index: 1;
+}
+.how-it-works.row .col-2.bottom::after {
+  height: 50%;
+  left: 50%;
+  top: 50%;
+}
+.how-it-works.row .col-2.full::after {
+  height: 100%;
+  left: calc(50% - 3px);
+}
+.how-it-works.row .col-2.top::after {
+  height: 50%;
+  left: 50%;
+  top: 0;
+}
+
+.timeline div {
+  padding: 0;
+  height: 40px;
+}
+.timeline hr {
+  border-top: 3px solid #ED8D8D;
+  margin: 0;
+  top: 17px;
+  position: relative;
+}
+.timeline .col-2 {
+  display: flex;
+  overflow: hidden;
+}
+.timeline .corner {
+  border: 3px solid #ED8D8D;
+  width: 100%;
+  position: relative;
+  border-radius: 15px;
+}
+.timeline .top-right {
+  left: 50%;
+  top: -50%;
+}
+.timeline .left-bottom {
+  left: -50%;
+  top: calc(50% - 3px);
+}
+.timeline .top-left {
+  left: -50%;
+  top: -50%;
+}
+.timeline .right-bottom {
+  left: 50%;
+  top: calc(50% - 3px);
+}
