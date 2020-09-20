@@ -29,6 +29,10 @@ jobs:
     - run: npm i next
     - run: npm run build
     - run: npm run export
+    - run: touch ./out/.nojekyll
+      
+      
+      
 #     - run: npm test
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@3.6.1
