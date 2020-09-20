@@ -7,6 +7,7 @@ import { Education } from "./Education";
 import { FunctionComponent } from "react";
 import { ITechnology } from "../interface";
 import { IExperiance } from "../interface/IExperiance";
+import { path } from "../utility/path";
 
 const Layout: FunctionComponent<{
   data: {
@@ -84,7 +85,7 @@ const Layout: FunctionComponent<{
                   <div className="relative shadow mx-auto h-48 w-48 -my-12 border-white rounded-full overflow-hidden border-4">
                     <img
                       className="object-cover w-full h-full"
-                      src="/img.jpeg"
+                      src={`${path}/img.jpeg`}
                     ></img>
                   </div>
                   <div className="mt-8">
@@ -174,7 +175,7 @@ const TechnologyCard: FunctionComponent<{ technology: ITechnology[] }> = ({
             baseURL="/"
             loader={<span>Loading...</span>}
             className="stroke-current text-purple-500 inline-block h-12 w-12"
-            src={d.path}
+            src={`${path}${d.path}`}
           ></SVG>
         </Card>
       ))}
