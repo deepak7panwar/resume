@@ -1,9 +1,10 @@
 import Layout from "../components/Layout";
 import { extractFrontMatter } from "../utility/extractFrontMatter";
+import { FunctionComponent } from "react";
 
-export default function Home({
-  frontmatter
-}) {
+export const Home: FunctionComponent<{ frontmatter: any }> = ({
+  frontmatter,
+}) => {
   return (
     <Layout data={frontmatter}>
       <article>
@@ -18,8 +19,9 @@ export default function Home({
       </article>
     </Layout>
   );
-}
+};
 
 export async function getStaticProps() {
   return extractFrontMatter();
 }
+export default Home;

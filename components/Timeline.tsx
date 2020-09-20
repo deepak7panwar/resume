@@ -1,12 +1,18 @@
+import { FunctionComponent } from "react";
 import ReactMarkdown from "react-markdown/with-html";
-export const Timeline = ({ experience }) => {
+import { IExperiance } from '../interface/IExperiance';
+export const Timeline: FunctionComponent<{ experience: IExperiance[] }> = ({
+  experience,
+}) => {
   const ListItem = experience.map((exp) => {
     const { company, link, jobTitle, dates, description } = exp;
     return (
       <li className="mb-2">
         <div className="flex items-center mb-1">
           <div className="bg-gray-500 rounded-full h-8 w-8"></div>
-          <div className=" text-xl flex-1 ml-4 font-medium font-semibold">{dates}</div>
+          <div className=" text-xl flex-1 ml-4 font-medium font-semibold">
+            {dates}
+          </div>
         </div>
         <section>
           <div className="ml-12">

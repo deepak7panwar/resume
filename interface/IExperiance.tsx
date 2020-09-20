@@ -6,4 +6,5 @@ export interface IExperiance {
   dates: string;
   quote: string;
   description: string;
+  jobTitle:string;
 }

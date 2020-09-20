@@ -1,4 +1,6 @@
-export const Education = () => {
+import { FunctionComponent } from "react";
+
+export const Education:FunctionComponent = () => {
   return (
     <section className="edu-section">
       <div className="blue-bg">

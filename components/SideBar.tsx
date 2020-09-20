@@ -1,4 +1,9 @@
-export const SideBar = ({ list }) => {
+import { FunctionComponent } from "react";
+import { ITechnology } from "../interface";
+
+export const SideBar: FunctionComponent<{ list: ITechnology[] }> = ({
+  list,
+}) => {
   const ListValue = list
     .sort((a, b) => b.percentage - a.percentage)
     .map((data) => (
@@ -14,7 +19,10 @@ export const SideBar = ({ list }) => {
     </div>
   );
 };
-export const Progress = ({ data, percentage }) => {
+export const Progress: FunctionComponent<{ data: any; percentage: string; }> = ({
+  data,
+  percentage,
+}) => {
   const divStyle = {
     width: percentage,
   };

@@ -1,38 +1,45 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
 import { Card } from "./Card";
 import { SideBar } from "./SideBar";
 import SVG from "react-inlinesvg";
 import { Fragment } from "react";
 import { Timeline } from "./Timeline";
 import { Education } from "./Education";
-export default function Layout({ children, data = {} }) {
+import { FunctionComponent } from "react";
+import { ITechnology } from "../interface";
+import { IExperiance } from "../interface/IExperiance";
+
+const Layout: FunctionComponent<{
+  data: {
+    experiance: IExperiance[];
+    basic: {
+      name: any;
+      address: any;
+      email: any;
+      contact: any;
+      description: any;
+      tags: string[];
+    };
+    technology: ITechnology[];
+  };
+}> = ({
+  data = {
+    experiance: [],
+    technology: [],
+    basic: {
+      name: "",
+      address: "",
+      email: "",
+      contact: "",
+      description: "",
+      tags: [],
+    },
+  },
+}) => {
   const {
     experiance,
     basic: { name, address, email, contact, description, tags = [] },
     technology,
-    education,
   } = data;
-  const { pathname } = useRouter();
-  const isRoot = pathname === "/";
-
-  const header = isRoot ? (
-    <h1 className="mb-8">
-      <Link href="/">
-        <a className="text-6xl font-black text-black no-underline">
-          Next.Js Starter Blog
-        </a>
-      </Link>
-    </h1>
-  ) : (
-    <h1 className="mb-2">
-      <Link href="/">
-        <a className="text-2xl font-black text-black no-underline">
-          Next.Js Starter Blog
-        </a>
-      </Link>
-    </h1>
-  );
 
   const Tags = tags.map((d) => (
     <div className="rounded text-xs mr-2 my-1 uppercase tracking-wider border px-2 text-indigo-600 border-indigo-600 hover:bg-indigo-600 hover:text-indigo-100 cursor-default">
@@ -154,9 +161,11 @@ export default function Layout({ children, data = {} }) {
       </div>
     </div>
   );
-}
+};
 
-const TechnologyCard = ({ technology }) => {
+const TechnologyCard: FunctionComponent<{ technology: ITechnology[] }> = ({
+  technology,
+}) => {
   return (
     <Fragment>
       {technology.map((d) => (
@@ -172,3 +181,4 @@ const TechnologyCard = ({ technology }) => {
     </Fragment>
   );
 };
+export default Layout;

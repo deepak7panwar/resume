@@ -1,6 +1,11 @@
 // pages/_app.js
 import "../styles/tailwind.scss";
+import { FunctionComponent } from "react";
 
-export default function MyApp({ Component, pageProps }) {
+export const MyApp: FunctionComponent<{ pageProps: any; Component: any }> = ({
+  Component,
+  pageProps,
+}) => {
   return <Component {...pageProps} />;
-}
+};
+export default MyApp;
