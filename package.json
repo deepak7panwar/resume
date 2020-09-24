@@ -19,7 +19,8 @@
     "typography": "^0.16.19",
     "react-markdown": "^4.3.1",
     "tailwindcss": "^1.7.3",
-    "gray-matter": "^4.0.2"
+    "gray-matter": "^4.0.2",
+    "@zeit/next-css": "latest"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
