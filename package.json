@@ -9,18 +9,18 @@
     "test": "jest"
   },
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "gray-matter": "^4.0.2",
     "next": "latest",
     "next-images": "^1.4.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-inlinesvg": "^2.0.1",
+    "react-markdown": "^4.3.1",
     "react-typography": "^0.16.19",
     "styled-components": "^5.0.0",
-    "typography": "^0.16.19",
-    "react-markdown": "^4.3.1",
     "tailwindcss": "^1.7.3",
-    "gray-matter": "^4.0.2",
-    "@zeit/next-css": "latest"
+    "typography": "^0.16.19"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
