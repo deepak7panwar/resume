@@ -1,2 +1,3 @@
 const withImages = require("next-images");
-module.exports = { withImages: withImages(), assetPrefix: "/resume/" };
+const withCSS = require("@zeit/next-css");
+module.exports = { withImages: withImages(), assetPrefix: "/resume/" ,withCSS:withCSS({})};
