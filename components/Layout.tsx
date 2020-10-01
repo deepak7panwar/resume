@@ -105,7 +105,7 @@ const Layout: FunctionComponent<{
                              <a 
                                    target="_blank"
                             className="underline text-blue-500 hover:text-blue-800"
-                               href={`tel:${contact[0]}`} class="Blondie">
+                               href={`tel:${contact[0]}`}>
                             {email}
                           </a></h1>
                       </div>
