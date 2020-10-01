@@ -4,7 +4,6 @@ basic:
   address: Suvikuja 3C, Espoo Finland
   email: deepak7panwar@hotmail.com
   contact:
-    - +919999190591
     - +358465394410
   websites: Date Range (eg. November 2016 - present)
   description: >
