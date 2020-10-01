@@ -106,7 +106,7 @@ const Layout: FunctionComponent<{
                                    target="_blank"
                             className="underline text-blue-500 hover:text-blue-800"
                                href={`tel:${contact[0]}`}>
-                            {email}
+                            {contact[0]}
                           </a></h1>
                       </div>
                       <div className="flex items-center mt-4 text-gray-700">
