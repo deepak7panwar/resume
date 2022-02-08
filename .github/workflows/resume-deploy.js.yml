@@ -25,7 +25,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
-    - run: npm i sass
+    # - run: npm i sass
     - run: npm i next
     - run: npm run build
     - run: npm run export
@@ -35,9 +35,8 @@ jobs:
       
 #     - run: npm test
     - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@3.6.1
+      uses: JamesIves/github-pages-deploy-action@v4.2.3
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages # The branch the action should deploy to.
         FOLDER: out # The folder the action should deploy.
         CLEAN: true # Automatically remove deleted files from the deploy branch
