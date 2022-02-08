@@ -1,9 +1,16 @@
 ---
 experiance:
+  - company: Paf
+    link: https://www.paf.com/en
+    jobTitle: Fullstack Developer
+    dates: September 2021 - current
+    description: |
+      - Cloudflare 
+      - AWS serverless
   - company: Tata Consultancy Services Finland
     link: tcs.com
     jobTitle: Fullstack Lead Developer for TCS
-    dates: January 2018 - current
+    dates: January 2018 - September 2021
     description: |
       - Developing customer facing Accessibility rich web application for clients in <mark>Angular 10</mark>, <mark>Bootstrap 4</mark>,
       <mark>SCSS</mark>, <mark>BEM</mark>,<mark>Design system</mark>, <mark>Nx monorepo</mark>

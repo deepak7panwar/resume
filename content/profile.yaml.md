@@ -1,7 +1,7 @@
 ---
 basic:
   name: Deepak Panwar
-  address: Suvikuja 3C, Espoo Finland
+  address:  Kulmavuorenkatu 7 B033, Helsinki Finland
   email: deepak7panwar@hotmail.com
   contact:
     - +358465394410
@@ -13,4 +13,5 @@ basic:
     - MERN stack developer
     - Web developer
     - JAVA developer
+    - AWS developer
 ---
